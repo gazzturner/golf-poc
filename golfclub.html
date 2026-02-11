@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Green Valley Golf Club</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f4f7f4;
+  color: #1f2a1f;
+}
+
+header {
+  background: #1e5631;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+nav {
+  background: #133d24;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+nav button {
+  background: none;
+  border: none;
+  color: white;
+  padding: 14px 18px;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+nav button:hover {
+  background: #1e5631;
+}
+
+.section {
+  display: none;
+  padding: 30px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.section.active {
+  display: block;
+}
+
+.card {
+  background: white;
+  padding: 18px;
+  margin: 12px 0;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 16px;
+}
+
+.footer {
+  background: #133d24;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+}
+
+input, textarea, select {
+  width: 100%;
+  padding: 10px;
+  margin-top: 6px;
+  margin-bottom: 12px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+button.primary {
+  background: #1e5631;
+  color: white;
+  border: none;
+  padding: 12px 18px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+button.primary:hover {
+  background: #287a45;
+}
+
+.badge {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  background: #dff3e6;
+  color: #1e5631;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>Green Valley Golf Club</h1>
+  <p>Championship Course • Members Club • Est. 1924</p>
+</header>
+
+<nav>
+  <button onclick="showSection('home')">Home</button>
+  <button onclick="showSection('members')">Members</button>
+  <button onclick="showSection('course')">Course</button>
+  <button onclick="showSection('events')">Functions</button>
+  <button onclick="showSection('shop')">Shop</button>
+  <button onclick="showSection('booking')">Book Tee Time</button>
+  <button onclick="showSection('contact')">Contact</button>
+</nav>
+
+<!-- HOME -->
+<section id="home" class="section active">
+  <h2>Club Information</h2>
+
+  <div class="card">
+    <h3>About the Club</h3>
+    <p>
+      Green Valley Golf Club is a premier 18-hole championship course featuring
+      tree-lined fairways, fast greens, and full practice facilities. Our clubhouse
+      includes a restaurant, bar, pro shop, and event spaces.
+    </p>
+  </div>
+
+  <div class="grid">
+    <div class="card">
+      <h3>Facilities</h3>
+      <ul>
+        <li>18 Hole Championship Course</li>
+        <li>Driving Range & Short Game Area</li>
+        <li>Putting Green</li>
+        <li>Clubhouse & Restaurant</li>
+        <li>Locker Rooms</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h3>Opening Hours</h3>
+      <p>Mon–Fri: 07:00 – 20:00</p>
+      <p>Sat–Sun: 06:30 – 21:00</p>
+      <span class="badge">Course Open</span>
+    </div>
+
+    <div class="card">
+      <h3>Membership Types</h3>
+      <ul>
+        <li>Full Member</li>
+        <li>Weekday Member</li>
+        <li>Junior Member</li>
+        <li>Social Member</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- MEMBERS -->
+<section id="members" class="section">
+  <h2>Members Area</h2>
+
+  <div class="card">
+    <h3>Member Notices</h3>
+    <ul>
+      <li>Greens maintenance on Hole 3 & 4 this Thursday</li>
+      <li>Club championship entries close Friday</li>
+      <li>New winter tee boxes now in play</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3>Upcoming Competitions</h3>
+    <ul>
+      <li>Saturday Medal – 10:00 Shotgun Start</li>
+      <li>Mixed Pairs – Sunday</li>
+      <li>Junior Open – Next Wednesday</li>
+    </ul>
+  </div>
+</section>
+
+<!-- COURSE -->
+<section id="course" class="section">
+  <h2>Course Status</h2>
+
+  <div class="grid">
+    <div class="card">
+      <h3>Today</h3>
+      <p>Status: <span class="badge">Open</span></p>
+      <p>Greens: Fast</p>
+      <p>Buggies: Allowed</p>
+    </div>
+
+    <div class="card">
+      <h3>Pin Positions</h3>
+      <p>Front 9: Position A</p>
+      <p>Back 9: Position C</p>
+    </div>
+
+    <div class="card">
+      <h3>Weather</h3>
+      <p>Dry, light wind</p>
+      <p>18°C</p>
+    </div>
+  </div>
+</section>
+
+<!-- EVENTS -->
+<section id="events" class="section">
+  <h2>Functions & Events</h2>
+
+  <div class="grid">
+    <div class="card">
+      <h3>Club Dinner Night</h3>
+      <p>Date: March 18</p>
+      <p>Live music & 3-course meal</p>
+    </div>
+
+    <div class="card">
+      <h3>Charity Golf Day</h3>
+      <p>Date: April 2</p>
+      <p>Teams of four • Shotgun start</p>
+    </div>
+
+    <div class="card">
+      <h3>Beginner Clinic</h3>
+      <p>Date: Weekly Saturdays</p>
+      <p>With club pro</p>
+    </div>
+  </div>
+</section>
+
+<!-- SHOP -->
+<section id="shop" class="section">
+  <h2>Pro Shop</h2>
+
+  <div class="grid">
+    <div class="card">
+      <h3>Club Polo Shirt</h3>
+      <p>£35</p>
+      <button class="primary">Add to Cart</button>
+    </div>
+
+    <div class="card">
+      <h3>Logo Cap</h3>
+      <p>£18</p>
+      <button class="primary">Add to Cart</button>
+    </div>
+
+    <div class="card">
+      <h3>Golf Balls (Dozen)</h3>
+      <p>£28</p>
+      <button class="primary">Add to Cart</button>
+    </div>
+
+    <div class="card">
+      <h3>Glove</h3>
+      <p>£14</p>
+      <button class="primary">Add to Cart</button>
+    </div>
+  </div>
+</section>
+
+<!-- BOOKING -->
+<section id="booking" class="section">
+  <h2>Book Tee Time</h2>
+
+  <div class="card">
+    <form onsubmit="event.preventDefault(); alert('Booking submitted (POC only)');">
+      <label>Name</label>
+      <input required>
+
+      <label>Date</label>
+      <input type="date" required>
+
+      <label>Preferred Time</label>
+      <input type="time" required>
+
+      <label>Players</label>
+      <select>
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+      </select>
+
+      <button class="primary">Submit Booking</button>
+    </form>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="section">
+  <h2>Contact Us</h2>
+
+  <div class="grid">
+    <div class="card">
+      <h3>Details</h3>
+      <p>Email: info@greenvalleygc.com</p>
+      <p>Phone: +44 1234 567890</p>
+      <p>Address: Fairway Lane, Green Valley</p>
+    </div>
+
+    <div class="card">
+      <h3>Send Message</h3>
+      <form onsubmit="event.preventDefault(); alert('Message sent (POC only)');">
+        <input placeholder="Your name" required>
+        <input placeholder="Email" required>
+        <textarea placeholder="Message" rows="4"></textarea>
+        <button class="primary">Send</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<div class="footer">
+  © Green Valley Golf Club — Demo POC Site
+</div>
+
+<script>
+function showSection(id) {
+  document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+}
+</script>
+
+</body>
+</html>
